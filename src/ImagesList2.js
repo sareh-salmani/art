@@ -7,6 +7,9 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
+import Avatar from "@mui/material/Avatar";
+import avatar from "./images/intro/0002-bw.jpg";
+import { AppBar, Typography, Link } from "@mui/material";
 
 const StyledButton = styled("dev")`
   background-color: black;
@@ -41,12 +44,20 @@ const options = {
 export default function StandardImageList() {
   return (
     <SRLWrapper options={options}>
+      {/* Avatar ---------- */}
       <Grid
         container
-        spacing={2}
+        spacing={0}
+        // xs= {mt:"35rem", mb:"15rem"}
+        // sm=" {mt:35rem, mb:35rem}"
+        // xs="{mt:15rem, mb:15rem}"
+        // xs={"sx={{backgroundColor = black}}"}
         sx={{
-          padding: "5rem",
+          mt: { xs: "10rem", sm: "35rem" },
+          mb: { xs: "10rem", sm: "35rem" },
+          // backgroundColor: "#b2a429",
           transition: "all 250ms ease",
+
           "&:hover": {
             boxShadow:
               "0 1.9rem 3.8rem rgba(0,0,0,0.3), 0 1,5rem 1.2rem rgba(0,0,0,0.3)",
@@ -54,18 +65,36 @@ export default function StandardImageList() {
           },
         }}
       >
-        <Grid item xs={6}>
-          Sareh Salmani is an iranian Artist burn in Tehran.
+        <Grid item xs={4} sm={6}>
+          <Avatar
+            // src="./images/intro/0001.jpg"
+            src={avatar}
+            alt="Sareh Salmani"
+            sx={{
+              width: { xs: 100, sm: 350 },
+              height: { xs: 100, sm: 350 },
+              // backgroundColor: "red"
+            }}
+          />
         </Grid>
-        <Grid item xs={6}>
-          زلف آشفته و خِوی کرده و خندان لب و مست پیرهن چاک و غزل خوان و صُراحی
-          در دست نرگسش عربده جوی و لبش افسوس کنان نیم شب دوش به بالین من آمد
-          بنشست سر فرا گوش من آورد به آواز حزین گفت ای عاشق دیرینهٔ من خوابت
-          هست؟ عاشقی را که چنین بادهٔ شبگیر دهند کافر عشق بود، گر نشود باده پرست
-          برو ای زاهد و بر دُردکشان خرده مگیر که ندادند جز این تحفه به ما روز
-          الست آن چه او ریخت به پیمانه ما نوشیدیم اگر از خَمر بهشت است وگر بادهٔ
-          مست خنده جامِ می و زلفِ گره گیر نگار ای بسا توبه که چون توبه حافظ
-          بشکست
+        <Grid
+          item
+          xs={8}
+          sm={6}
+          sx={{
+            mt: { xs: 0, sm: "8rem" },
+            // backgroundColor: "red"
+          }}
+        >
+          <Link
+            sx={{ color: "#4fc3f7", mr: 1 }}
+            href="https://www.instagram.com/sarehsalmani/"
+            target="_blank"
+          >
+            Sareh Salmani
+          </Link>
+          is an Iranian painter and poet, borend in Tehran. Her works includes
+          Digital Painting and Mixed Media.
         </Grid>
       </Grid>
 

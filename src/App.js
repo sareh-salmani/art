@@ -12,6 +12,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "./Style";
 import Footer from "./Footer";
 import Calligraphy from "./Calligraphy";
+import Intro from "./Intro";
 
 // const darkTheme = createTheme({
 //   palette: {
@@ -24,6 +25,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Nav />
       <CssBaseline />
+      {/* <Intro /> */}
       <Container>
         {/* <ImagesList /> */}
         <ImagesList2 />
