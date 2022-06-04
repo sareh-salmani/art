@@ -30,9 +30,17 @@ const StyledButton = styled("dev")`
   }
 `;
 
+const options = {
+  buttons: {
+    backgroundColor: "#1b5245",
+    iconColor: "rgba(126, 172, 139, 0.8)",
+    showDownloadButton: false,
+  },
+};
+
 export default function StandardImageList() {
   return (
-    <SRLWrapper>
+    <SRLWrapper options={options}>
       <Grid
         container
         spacing={2}
