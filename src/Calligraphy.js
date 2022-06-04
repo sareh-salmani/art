@@ -20,10 +20,12 @@ const style = {
   title: {
     fontFamily: "Roboto",
     fontSize: 68,
+    pt: 8,
     mr: 0.5,
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
+    textAlign: "center",
   },
   link: {
     display: "flex",
@@ -41,8 +43,8 @@ export default function Footer() {
     <AppBar
       position="static"
       sx={{
-        mt: "10rem",
-        mb: "10rem",
+        // mt: "10rem",
+        // mb: "10rem",
         bgcolor: "#90caf9",
         height: 1000,
       }}
@@ -51,7 +53,7 @@ export default function Footer() {
         container
         spacing={1}
         sx={{
-          padding: "5rem",
+          // padding: "5rem",
           backgroundColor: "#90caf1",
           transition: "all 250ms ease",
           "&:hover": {
@@ -64,7 +66,7 @@ export default function Footer() {
         <Grid item xs={12}>
           <Typography sx={style.title}>Calligraphy</Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ textAlign: "center" }}>
           Coming soon...
         </Grid>
       </Grid>

@@ -13,6 +13,8 @@ import { theme } from "./Style";
 import Footer from "./Footer";
 import Calligraphy from "./Calligraphy";
 import Intro from "./Intro";
+import PoenOne from "./PoenOne";
+import PoemNull from "./PoemNull";
 
 // const darkTheme = createTheme({
 //   palette: {
@@ -30,7 +32,10 @@ function App() {
         {/* <ImagesList /> */}
         <ImagesList2 />
       </Container>
+
+      <PoemNull />
       <Calligraphy />
+      <PoenOne />
 
       <Footer />
     </ThemeProvider>
