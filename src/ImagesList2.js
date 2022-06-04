@@ -8,7 +8,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Avatar from "@mui/material/Avatar";
-import avatar from "./images/intro/0002-bw.jpg";
+import avatar from "./images/intro/0002.jpg";
 import { AppBar, Typography, Link } from "@mui/material";
 
 const StyledButton = styled("dev")`
@@ -93,7 +93,7 @@ export default function StandardImageList() {
           >
             Sareh Salmani
           </Link>
-          is an Iranian painter and poet, borend in Tehran. Her works includes
+          is an Iranian painter and poet, born in Tehran. Her works include
           Digital Painting and Mixed Media.
         </Grid>
       </Grid>
