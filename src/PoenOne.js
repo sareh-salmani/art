@@ -28,7 +28,7 @@ export default function StandardImageList() {
         // mt: { xs: "10rem", sm: "35rem" },
         // mb: { xs: "10rem", sm: "35rem" },
         // backgroundColor: "#4dabf5", //blue
-        backgroundColor: "#00a152",
+        backgroundColor: "#311b92",
         transition: "all 250ms ease",
 
         "&:hover": {

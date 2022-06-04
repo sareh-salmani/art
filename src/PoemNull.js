@@ -32,7 +32,7 @@ export default function StandardImageList() {
         // mb: { xs: 0, sm: "8rem" },
         pt: "10rem",
         pb: "10rem",
-        backgroundColor: "#357a38",
+        backgroundColor: "#1a237e",
         transition: "all 250ms ease",
 
         "&:hover": {
