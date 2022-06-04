@@ -49,7 +49,7 @@ export default function StandardImageList() {
           sx={{
             fontFamily: "Chilanka",
             color: "#FFFFFF",
-            fontSize: { xs: 12, sm: 24 },
+            fontSize: { xs: 14, sm: 24 },
           }}
         >
           به مستی رخساره وار رقصید زمین و عبور کرد تا کرانه های خودکامگی. ستاره

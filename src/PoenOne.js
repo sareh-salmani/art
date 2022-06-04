@@ -55,7 +55,7 @@ export default function StandardImageList() {
           sx={{
             fontFamily: "Chilanka",
             color: "#FFFFFF",
-            fontSize: { xs: 12, sm: 24 },
+            fontSize: { xs: 14, sm: 24 },
           }}
         >
           دامن کشان چنان زیبا در حال پروازم که تمام قناری های کنج دلی را می بینم
