@@ -93,8 +93,8 @@ export default function StandardImageList() {
           >
             Sareh Salmani
           </Link>
-          is an Iranian painter and poet, born in Tehran. Her works include
-          Digital Painting and Mixed Media.
+          is an Iranian painter and poet, who was born in Tehran. Her works
+          include Digital Painting and Mixed Media.
         </Grid>
       </Grid>
 
