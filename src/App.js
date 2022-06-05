@@ -1,20 +1,15 @@
 import "./App.css";
-import { MainComponent } from "./MainComponent";
-import ImagesList from "./ImagesList";
 import ImagesList2 from "./ImagesList2";
-import { Container } from "@mui/material";
 import Nav from "./components/Nav";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-// import { ThemeProvider } from "@emotion/react";
-// import { ThemeProvider } from "@mui/material/styles";
 
 import { theme } from "./Style";
 import Footer from "./Footer";
 import Calligraphy from "./Calligraphy";
-import Intro from "./Intro";
-import PoenOne from "./PoenOne";
+import PoemOne from "./PoemOne";
 import PoemNull from "./PoemNull";
+import DigitalPainting from "./DigitalPainting";
 
 // const darkTheme = createTheme({
 //   palette: {
@@ -28,14 +23,16 @@ function App() {
       <Nav />
       <CssBaseline />
       {/* <Intro /> */}
-      <Container>
-        {/* <ImagesList /> */}
-        <ImagesList2 />
-      </Container>
+      {/* <Container> */}
+      {/* <ImagesList /> */}
+      <ImagesList2 />
+      {/* </Container> */}
 
       <PoemNull />
       <Calligraphy />
-      <PoenOne />
+      <PoemOne />
+
+      <DigitalPainting />
 
       <Footer />
     </ThemeProvider>

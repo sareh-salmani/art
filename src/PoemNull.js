@@ -1,23 +1,8 @@
 import * as React from "react";
 
-import { SRLWrapper } from "simple-react-lightbox";
-import { styled } from "@mui/system";
-
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import ButtonBase from "@mui/material/ButtonBase";
-import Avatar from "@mui/material/Avatar";
-import avatar from "./images/intro/0002-bw.jpg";
-import { AppBar, Typography, Link } from "@mui/material";
 
-const options = {
-  buttons: {
-    backgroundColor: "#1b5245",
-    iconColor: "rgba(126, 172, 139, 0.8)",
-    showDownloadButton: false,
-  },
-};
+import { Typography } from "@mui/material";
 
 export default function StandardImageList() {
   return (
@@ -25,21 +10,16 @@ export default function StandardImageList() {
       container
       spacing={0}
       sx={{
-        // mt: { xs: "10rem", sm: "35rem" },
-        // mb: { xs: "10rem", sm: "35rem" },
-        // backgroundColor: "#4dabf5", //blue
-        // mt: { xs: 0, sm: "8rem" },
-        // mb: { xs: 0, sm: "8rem" },
         pt: "10rem",
         pb: "10rem",
         backgroundColor: "#1a237e",
         transition: "all 250ms ease",
 
-        "&:hover": {
-          boxShadow:
-            "0 1.9rem 3.8rem rgba(0,0,0,0.3), 0 1,5rem 1.2rem rgba(0,0,0,0.3)",
-          transform: "translate(0, -1rem)",
-        },
+        // "&:hover": {
+        //   boxShadow:
+        //     "0 1.9rem 3.8rem rgba(0,0,0,0.3), 0 1,5rem 1.2rem rgba(0,0,0,0.3)",
+        //   transform: "translate(0, -1rem)",
+        // },
       }}
     >
       <Grid item xs={1} sm={1}></Grid>

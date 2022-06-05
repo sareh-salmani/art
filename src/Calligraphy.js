@@ -1,10 +1,5 @@
-import { AppBar, Typography, Link } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { AppBar, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-
-import { theme } from "./Style";
-
-const greyConst = grey[800];
 
 const style = {
   centralizer: {

@@ -1,12 +1,6 @@
 import { AppBar, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import { grey } from "@mui/material/colors";
-// import Links from "./Links";
-
-import { theme } from "./Style";
-
-const greyConst = grey[800];
 
 const style = {
   centralizer: {
