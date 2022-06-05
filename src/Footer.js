@@ -54,7 +54,7 @@ export default function Footer() {
             created by&nbsp;
             <Link
               sx={{ color: "#4fc3f7", mr: 1 }}
-              href="http://instagram.com/ehsan.pd_?r=nametag"
+              href="https://www.instagram.com/ehsan.soren/"
               target="_blank"
             >
               Ehsan Salmani

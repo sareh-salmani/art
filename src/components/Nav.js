@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/system";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Typography, Link, keyframes } from "@mui/material";
 
 const style = {
   typography: {
@@ -70,15 +71,49 @@ const style = {
   },
 };
 
+const trackingInExpand = keyframes`
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+`;
+
+const TextAnimation = styled(Typography)(({ action }) => ({
+  color: "#311b92",
+  visibility: !action && "hidden",
+  animation:
+    action &&
+    `${trackingInExpand} 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both`,
+
+  // "&:hover": {
+  //   color: "#fff",
+  //   animation: `${trackingInExpand} 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both`,
+  // },
+}));
+
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Nav = () => {
+  const [action, setAction] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => {
+      // animation
+      setAction(true);
+    }, 500);
+  }, []);
+
   return (
     <Box sx={style.box_2}>
-      <Typography sx={style.typography_2} component="div">
+      <TextAnimation action={action} sx={style.typography_2} component="div">
         Sareh Salmani's Art works
-      </Typography>
+      </TextAnimation>
       <Box></Box>
     </Box>
   );

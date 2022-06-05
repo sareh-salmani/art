@@ -4,12 +4,10 @@ import { SRLWrapper } from "simple-react-lightbox";
 import { styled } from "@mui/system";
 
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import ButtonBase from "@mui/material/ButtonBase";
 import Avatar from "@mui/material/Avatar";
 import avatar from "./images/intro/0002.jpg";
-import { AppBar, Typography, Link } from "@mui/material";
+import { Typography, Link, keyframes } from "@mui/material";
 
 const StyledButton = styled("dev")`
   background-color: black;
@@ -47,16 +45,14 @@ export default function StandardImageList() {
       {/* Avatar ---------- */}
       <Grid
         container
-        spacing={0}
-        // xs= {mt:"35rem", mb:"15rem"}
-        // sm=" {mt:35rem, mb:35rem}"
-        // xs="{mt:15rem, mb:15rem}"
-        // xs={"sx={{backgroundColor = black}}"}
+        spacing={1}
+        alignItems="center"
+        justifyContent="center"
         sx={{
           mt: { xs: "10rem", sm: "35rem" },
           mb: { xs: "10rem", sm: "35rem" },
-          // backgroundColor: "#b2a429",
           transition: "all 250ms ease",
+          // backgroundColor: "#b2a429",
 
           "&:hover": {
             boxShadow:
@@ -65,37 +61,59 @@ export default function StandardImageList() {
           },
         }}
       >
-        <Grid item xs={4} sm={6}>
+        {/* <Grid item xs={4} sm={4}> */}
+        <Grid item xs={8} sm={4}>
           <Avatar
-            // src="./images/intro/0001.jpg"
             src={avatar}
             alt="Sareh Salmani"
             sx={{
               width: { xs: 100, sm: 350 },
               height: { xs: 100, sm: 350 },
-              // backgroundColor: "red"
             }}
           />
         </Grid>
         <Grid
           item
           xs={8}
-          sm={6}
+          sm={8}
           sx={{
-            mt: { xs: 0, sm: "8rem" },
-            // backgroundColor: "red"
+            mt: { xs: 0, sm: "0rem" },
+            // backgroundColor: "red",
           }}
         >
-          <Link
-            sx={{ color: "#4fc3f7", mr: 1 }}
-            href="https://www.instagram.com/sarehsalmani/"
-            target="_blank"
-          >
-            Sareh Salmani
-          </Link>
-          is an Iranian painter and poet, who was born in Tehran. Her works
-          include Digital Painting and Mixed Media.
+          <Typography>
+            <Link
+              sx={{ color: "#4fc3f7", mr: 1 }}
+              href="https://www.instagram.com/sarehsalmani/"
+              target="_blank"
+            >
+              Sareh Salmani
+            </Link>
+            is an Iranian painter and poet, who was born in Tehran. Her works
+            include Digital Painting and Mixed Media.
+          </Typography>
         </Grid>
+        {/* <Grid
+          item
+          xs={8}
+          sm={6}
+          sx={{
+            mt: { xs: 0, sm: "0rem" },
+            backgroundColor: "red",
+          }}
+        >
+          <Typography>
+            <Link
+              sx={{ color: "#4fc3f7", mr: 1 }}
+              href="https://www.instagram.com/sarehsalmani/"
+              target="_blank"
+            >
+              Sareh Salmani
+            </Link>
+            is an Iranian painter and poet, who was born in Tehran. Her works
+            include Digital Painting and Mixed Media.
+          </Typography>
+        </Grid> */}
       </Grid>
 
       {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
@@ -111,7 +129,6 @@ export default function StandardImageList() {
               alignItems: "center",
               justifyContent: "center",
               // margin: ".1rem",
-              // backgroundColor: "red",
             }}
           >
             <Box
