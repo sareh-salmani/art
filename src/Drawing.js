@@ -1,3 +1,4 @@
+import * as React from "react";
 import { AppBar, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
@@ -34,14 +35,22 @@ const style = {
 };
 
 export default function Footer() {
+  const [action, setAction] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => {
+      // animation
+      setAction(true);
+    }, 50);
+  }, []);
   return (
     <AppBar
       position="static"
       sx={{
         // mt: "10rem",
         // mb: "10rem",
+        // bgcolor: "#757575",
         bgcolor: "#90caf9",
-        height: 1000,
+        height: { xs: 500, sm: 1000 },
       }}
     >
       <Grid
@@ -49,17 +58,18 @@ export default function Footer() {
         spacing={1}
         sx={{
           // padding: "5rem",
+          // backgroundColor: "#757575",
           backgroundColor: "#90caf1",
           transition: "all 250ms ease",
-          "&:hover": {
-            boxShadow:
-              "0 1.9rem 3.8rem rgba(0,0,0,0.3), 0 1,5rem 1.2rem rgba(0,0,0,0.1)",
-            transform: "translate(0, -3rem)",
-          },
+          // "&:hover": {
+          //   boxShadow:
+          //     "0 1.9rem 3.8rem rgba(0,0,0,0.3), 0 1,5rem 1.2rem rgba(0,0,0,0.1)",
+          //   transform: "translate(0, -3rem)",
+          // },
         }}
       >
         <Grid item xs={12}>
-          <Typography sx={style.title}>Calligraphy</Typography>
+          <Typography sx={style.title}>Drawing</Typography>
         </Grid>
         <Grid item xs={12} sx={{ textAlign: "center" }}>
           Coming soon...

@@ -1,4 +1,7 @@
 import "./App.css";
+
+import { SRLWrapper } from "simple-react-lightbox";
+
 import ImagesList2 from "./ImagesList2";
 import Nav from "./components/Nav";
 import { ThemeProvider } from "@mui/material/styles";
@@ -6,36 +9,36 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import { theme } from "./Style";
 import Footer from "./Footer";
-import Calligraphy from "./Calligraphy";
+import Drawing from "./Drawing";
 import PoemOne from "./PoemOne";
 import PoemNull from "./PoemNull";
+import Poem02 from "./Poem02";
 import DigitalPainting from "./DigitalPainting";
-
-// const darkTheme = createTheme({
-//   palette: {
-//     mode: "dark",
-//   },
-// });
+import { Container } from "@mui/material";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Nav />
-      <CssBaseline />
-      {/* <Intro /> */}
-      {/* <Container> */}
-      {/* <ImagesList /> */}
-      <ImagesList2 />
-      {/* </Container> */}
+    <div>
+      <ThemeProvider theme={theme}>
+        <Nav />
+        <CssBaseline />
+        {/* <Intro /> */}
+        {/* <Container> */}
+        {/* <ImagesList /> */}
+        <SRLWrapper>
+          <ImagesList2 />
+          {/* </Container> */}
 
-      <PoemNull />
-      <Calligraphy />
-      <PoemOne />
+          <PoemNull />
+          <Drawing />
+          <PoemOne />
+          <DigitalPainting />
+          <Poem02 />
 
-      <DigitalPainting />
-
-      <Footer />
-    </ThemeProvider>
+          <Footer />
+        </SRLWrapper>
+      </ThemeProvider>
+    </div>
   );
 }
 

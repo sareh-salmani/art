@@ -1,7 +1,10 @@
 import * as React from "react";
 
-import { SRLWrapper } from "simple-react-lightbox";
 import { Typography, Link, Grid, Box, Avatar, Container } from "@mui/material";
+import EmailIcon from "@mui/icons-material/Email";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 import avatar from "./images/intro/0002.jpg";
 
@@ -50,63 +53,89 @@ const style = {
       borderRadius: "50%",
     },
   },
+  link: {
+    target: "_blank",
+  },
+  icons: {
+    color: "#283593",
+    // color: "#ff6f00",
+    fontSize: { xs: "28px", sm: "34px" },
+    mt: "1rem",
+    mr: ".3rem",
+  },
 };
 
 export default function StandardImageList() {
   return (
-    <SRLWrapper options={style}>
-      <Grid container sx={style.gridContainer}>
-        {/* Avatar */}
-        <Container>
-          <Grid container spacing={1} sx={style.gridContainerAvatar}>
-            <Grid item xs={8} sm={4}>
-              <Avatar
-                src={avatar}
-                alt="Sareh Salmani"
-                sx={{
-                  width: { xs: 100, sm: 350 },
-                  height: { xs: 100, sm: 350 },
-                }}
-              />
-            </Grid>
-            <Grid item xs={11} sm={8} sx={style.gridItem}>
-              <Typography>
+    <Grid container sx={style.gridContainer}>
+      {/* Avatar */}
+      <Container>
+        <Grid container spacing={1} sx={style.gridContainerAvatar}>
+          <Grid item xs={12} sm={4}>
+            <Avatar
+              src={avatar}
+              alt="Sareh Salmani"
+              sx={{
+                width: { xs: 100, sm: 350 },
+                height: { xs: 100, sm: 350 },
+              }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={8} sx={style.gridItem}>
+            <Typography>
+              <Link
+                sx={{ color: "#3f51b5", mr: 1 }}
+                href="https://www.instagram.com/sarehsalmani/"
+                target="_blank"
+              >
+                Sareh Salmani
+              </Link>
+              is an Iranian painter and poet, who was born in Tehran. Her works
+              include Digital Painting and Mixed Media.
+              {/* <div>.</div> */}
+              <div>
                 <Link
-                  sx={{ color: "#4fc3f7", mr: 1 }}
                   href="https://www.instagram.com/sarehsalmani/"
                   target="_blank"
                 >
-                  Sareh Salmani
+                  <InstagramIcon sx={style.icons} />
                 </Link>
-                is an Iranian painter and poet, who was born in Tehran. Her
-                works include Digital Painting and Mixed Media.
-              </Typography>
-            </Grid>
+                <Link href="https://twitter.com/sarehsalmani" target="_blank">
+                  <TwitterIcon sx={style.icons} />
+                </Link>
+                <Link href="https://www.facebook.com/sareh.slm" target="_blank">
+                  <FacebookIcon sx={style.icons} />
+                </Link>
+                <Link href="mailto:sarehsalmani@gmail.com" target="_blank">
+                  <EmailIcon sx={style.icons} />
+                </Link>
+              </div>
+            </Typography>
           </Grid>
+        </Grid>
 
-          {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
-          {/* <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
-          {/* Photos */}
-          <Grid container>
-            {itemData.map((image) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  // margin: ".1rem",
-                }}
-              >
-                <Box component="img" sx={style.box} src={`${image.img}`} />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Grid>
-    </SRLWrapper>
+        {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
+        {/* <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
+        {/* Photos */}
+        <Grid container>
+          {itemData.map((image) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                // margin: ".1rem",
+              }}
+            >
+              <Box component="img" sx={style.box} src={`${image.img}`} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Grid>
   );
 }
 

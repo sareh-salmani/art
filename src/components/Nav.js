@@ -7,9 +7,6 @@ import { Typography, keyframes } from "@mui/material";
 const style = {
   typography: {
     alignItems: "center",
-    // pb: { xs: 45, md: 60 },
-    // pt: { xs: 45, md: 60 },
-    // lineHeight: "100%",
     fontSize: { xs: "h7.fontSize", md: "h5.fontSize" },
     fontFamily: "Monospace",
     fontStyle: "italic",
@@ -22,18 +19,11 @@ const style = {
   },
   typography_2: {
     alignItems: "center",
-    // pb: { xs: 45, md: 60 },
-    // pt: { xs: 45, md: 60 },
-    // lineHeight: "100%",
     fontSize: { xs: "h7.fontSize", md: "h5.fontSize" },
     fontFamily: "Monospace",
     fontStyle: "italic",
     fontWeight: "light",
     letterSpacing: { xs: 0, md: 20 },
-    // width: "100%",
-    // textAlign: "center",
-    // backgroundColor: "primary.main",
-    // height: 300,
   },
   box: {
     flexGrow: 1,
@@ -44,9 +34,6 @@ const style = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundColor: "primary.main",
-
-    // backgroundPosition: "center",
-    // position: "relative",
 
     // font
     display: "flex",
@@ -110,20 +97,5 @@ const Nav = () => {
     </Box>
   );
 };
-
-// const Nav = () => {
-//   return (
-//     <AppBar position="static">
-//       <Container>
-//         <Toolbar disableGutters sx={style.toolbar}>
-//           <Typography component="div" sx={style.typography}>
-//             Sareh Salmani's Art works
-//           </Typography>
-//           <Box sx={style.box}></Box>
-//         </Toolbar>
-//       </Container>
-//     </AppBar>
-//   );
-// };
 
 export default Nav;
