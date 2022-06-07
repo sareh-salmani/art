@@ -11,8 +11,10 @@ export default function Poem() {
       container
       spacing={0}
       sx={{
-        pt: "10rem",
-        pb: "10rem",
+        pt: { xs: "2rem", sm: "4rem" },
+        pb: { xs: "2rem", sm: "4rem" },
+        // pt: "10rem",
+        // pb: "10rem",
         backgroundColor: "#1a237e",
         transition: "all 250ms ease",
 

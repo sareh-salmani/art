@@ -1,13 +1,12 @@
 import * as React from "react";
 
 import { Box, Grid } from "@mui/material";
-import { style } from "./styleCustom";
+import { style } from "./StyleCustom";
 import { TextAnimation } from "./TextAnimation";
 
 export const localStyle = {
   gridContainer: {
-    pb: { xs: "2rem", md: "5rem" },
-    // backgroundColor: "#b388ff", // deep purpule
+    pb: { xs: "2rem", sm: "5rem" },
     backgroundColor: "#ffca28", // amber 400
   },
 };
@@ -108,36 +107,80 @@ const itemData = [
     img: require("./images/digital_painting/016.jpg").default,
     title: "Bike",
   },
+  {
+    img: require("./images/digital_painting/017.jpg").default,
+    title: "Mushrooms",
+  },
+  {
+    img: require("./images/digital_painting/018.jpg").default,
+    title: "Tomato basil",
+  },
+  {
+    img: require("./images/digital_painting/019.jpg").default,
+    title: "Sea star",
+  },
+  {
+    img: require("./images/digital_painting/020.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/021.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/022.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/023.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/024.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/025.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/026.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/027.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/028.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/029.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/030.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/031.jpg").default,
+    title: "Bike",
+  },
+  {
+    img: require("./images/digital_painting/032.jpg").default,
+    title: "Bike",
+  },
   // {
-  //   img: require("./images/digital_painting/0017.jpg").default,
-  //   title: "Mushrooms",
-  // },
-  // {
-  //   img: require("./images/digital_painting/0018.jpg").default,
-  //   title: "Tomato basil",
-  // },
-  // {
-  //   img: require("./images/digital_painting/0019.jpg").default,
-  //   title: "Sea star",
-  // },
-  // {
-  //   img: require("./images/digital_painting/0020.jpg").default,
+  //   img: require("./images/digital_painting/033.jpg").default,
   //   title: "Bike",
   // },
   // {
-  //   img: require("./images/digital_painting/0021.jpg").default,
+  //   img: require("./images/digital_painting/034.jpg").default,
   //   title: "Bike",
   // },
   // {
-  //   img: require("./images/digital_painting/0022.jpg").default,
-  //   title: "Bike",
-  // },
-  // {
-  //   img: require("./images/digital_painting/0023.jpg").default,
-  //   title: "Bike",
-  // },
-  // {
-  //   img: require("./images/digital_painting/0024.jpg").default,
+  //   img: require("./images/digital_painting/035.jpg").default,
   //   title: "Bike",
   // },
 ];

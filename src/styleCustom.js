@@ -14,14 +14,23 @@ export const style = {
   title: {
     display: "flex",
     justifyContent: "center",
-    pb: { xs: 35, md: 50 },
-    pt: { xs: 35, md: 50 },
-    fontSize: { xs: "h7.fontSize", md: "h5.fontSize" },
+    pt: { xs: 25, sm: 45 },
+    pb: { xs: 25, sm: 45 },
+    fontSize: { xs: "h5.fontSize", sm: "24px" },
     fontFamily: "Monospace",
     fontStyle: "italic",
     fontWeight: "light",
-    letterSpacing: { xs: 0, md: 20 },
+    letterSpacing: { xs: 0, sm: 12 },
+    transition: "all 1.5s linear",
+
     // backgroundColor: "#2196f3",
+
+    "&:hover": {
+      // cursor: "pointer",
+      // transition: "transform 1s cubic-bezier(.58,.12,.39,1.47)",
+      // transform: "translateX(40%)",
+      transform: "translateX(10%)",
+    },
   },
   buttons: {
     backgroundColor: "#1b5245",
@@ -43,5 +52,38 @@ export const style = {
       borderColor: "text.primary",
       borderRadius: "10%",
     },
+  },
+  chalcographyBox: {
+    width: 200,
+    height: 300,
+    backgroundColor: "black",
+    margin: "1rem",
+    border: 5,
+
+    "&:hover": {
+      cursor: "pointer",
+      // backgroundColor: "primary.main",
+      opacity: [0.1, 0.5, 0.5],
+      border: 35,
+      borderColor: "text.primary",
+      borderRadius: "5%",
+    },
+  },
+  poemTypography: {
+    fontFamily: "Chilanka",
+    color: "#FFFFFF",
+    fontSize: { xs: 14, sm: 24 },
+  },
+  poemGridContainer: {
+    pt: "2rem",
+    pb: "2rem",
+    mt: { xs: "1rem", sm: "2rem" },
+    mb: { xs: "1rem", sm: "2rem" },
+  },
+  poemGridItem: {
+    pt: "2rem",
+    pb: "2rem",
+    mt: { xs: 0, sm: "2rem" },
+    mb: { xs: 0, sm: "2rem" },
   },
 };

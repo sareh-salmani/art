@@ -14,7 +14,17 @@ import PoemOne from "./PoemOne";
 import PoemNull from "./PoemNull";
 import Poem02 from "./Poem02";
 import DigitalPainting from "./DigitalPainting";
-import { Container } from "@mui/material";
+import Chalcography from "./Chalcography";
+import SimpleGrow from "./SimpleGrow";
+import MixedMedia from "./MixedMedia";
+
+const style = {
+  buttons: {
+    backgroundColor: "#1b5245",
+    iconColor: "rgba(245, 223, 39, 0.8)",
+    showDownloadButton: false,
+  },
+};
 
 function App() {
   return (
@@ -25,7 +35,7 @@ function App() {
         {/* <Intro /> */}
         {/* <Container> */}
         {/* <ImagesList /> */}
-        <SRLWrapper>
+        <SRLWrapper options={style}>
           <ImagesList2 />
           {/* </Container> */}
 
@@ -34,6 +44,9 @@ function App() {
           <PoemOne />
           <DigitalPainting />
           <Poem02 />
+          <MixedMedia />
+          {/* <Chalcography /> */}
+          {/* <SimpleGrow /> */}
 
           <Footer />
         </SRLWrapper>

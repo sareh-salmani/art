@@ -6,6 +6,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
+import { FlipAnimation } from "./animation/FlipAnimation";
+
 import avatar from "./images/intro/0002.jpg";
 
 const style = {
@@ -26,6 +28,7 @@ const style = {
   gridContainerAvatar: {
     mt: { xs: "10rem", sm: "35rem" },
     mb: { xs: "10rem", sm: "35rem" },
+    // backgroundColor: "red",
   },
   gridItem: {
     display: "flex",
@@ -46,11 +49,12 @@ const style = {
     border: 5,
     // "box-shadow": "inset 4rem 4rem 4rem 4rem yellow",
     "&:hover": {
+      cursor: "pointer",
       backgroundColor: "primary.main",
       opacity: [0.9, 0.8, 0.7],
       border: 5,
       borderColor: "text.primary",
-      borderRadius: "50%",
+      borderRadius: "40%",
     },
   },
   link: {
@@ -66,53 +70,46 @@ const style = {
 };
 
 export default function StandardImageList() {
+  const [action, setAction] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => {
+      // animation
+      setAction(true);
+    }, 0);
+  }, []);
+
   return (
     <Grid container sx={style.gridContainer}>
-      {/* Avatar */}
       <Container>
-        <Grid container spacing={1} sx={style.gridContainerAvatar}>
-          <Grid item xs={12} sm={4}>
-            <Avatar
-              src={avatar}
-              alt="Sareh Salmani"
-              sx={{
-                width: { xs: 100, sm: 350 },
-                height: { xs: 100, sm: 350 },
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={8} sx={style.gridItem}>
-            <Typography>
-              <Link
-                sx={{ color: "#3f51b5", mr: 1 }}
-                href="https://www.instagram.com/sarehsalmani/"
-                target="_blank"
-              >
-                Sareh Salmani
-              </Link>
-              is an Iranian painter and poet, who was born in Tehran. Her works
-              include Digital Painting and Mixed Media.
-              {/* <div>.</div> */}
-              <div>
+        {/* Avatar */}
+        <FlipAnimation action={action}>
+          <Grid container spacing={1} sx={style.gridContainerAvatar}>
+            <Grid item xs={12} sm={4}>
+              <Avatar
+                src={avatar}
+                alt="Sareh Salmani"
+                sx={{
+                  width: { xs: 100, sm: 350 },
+                  height: { xs: 100, sm: 350 },
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={8} sx={style.gridItem}>
+              <Typography>
                 <Link
+                  sx={{ color: "#3f51b5", mr: 1 }}
                   href="https://www.instagram.com/sarehsalmani/"
                   target="_blank"
                 >
-                  <InstagramIcon sx={style.icons} />
+                  Sareh Salmani
                 </Link>
-                <Link href="https://twitter.com/sarehsalmani" target="_blank">
-                  <TwitterIcon sx={style.icons} />
-                </Link>
-                <Link href="https://www.facebook.com/sareh.slm" target="_blank">
-                  <FacebookIcon sx={style.icons} />
-                </Link>
-                <Link href="mailto:sarehsalmani@gmail.com" target="_blank">
-                  <EmailIcon sx={style.icons} />
-                </Link>
-              </div>
-            </Typography>
+                is an Iranian painter and poet, who was born in Tehran. Her
+                works include Digital Painting and Mixed Media.
+                {icons}
+              </Typography>
+            </Grid>
           </Grid>
-        </Grid>
+        </FlipAnimation>
 
         {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
         {/* <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
@@ -138,6 +135,23 @@ export default function StandardImageList() {
     </Grid>
   );
 }
+
+const icons = (
+  <div>
+    <Link href="https://www.instagram.com/sarehsalmani/" target="_blank">
+      <InstagramIcon sx={style.icons} />
+    </Link>
+    <Link href="https://twitter.com/sarehsalmani" target="_blank">
+      <TwitterIcon sx={style.icons} />
+    </Link>
+    <Link href="https://www.facebook.com/sareh.slm" target="_blank">
+      <FacebookIcon sx={style.icons} />
+    </Link>
+    <Link href="mailto:sarehsalmani@gmail.com" target="_blank">
+      <EmailIcon sx={style.icons} />
+    </Link>
+  </div>
+);
 
 const itemData = [
   {
