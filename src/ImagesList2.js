@@ -17,7 +17,8 @@ const style = {
     // mb: { xs: "10rem", sm: "35rem" },
     transition: "all 250ms ease",
     // backgroundColor: "#b2a429",
-    backgroundColor: "#bbdefb", // blue
+    // backgroundColor: "#bbdefb", // blue
+    backgroundColor: "#64b5f6", // blue 300
 
     // "&:hover": {
     //   boxShadow:
@@ -41,8 +42,10 @@ const style = {
     showDownloadButton: false,
   },
   box: {
-    width: 400,
-    height: 500,
+    // width: 400,
+    // height: 500,
+    maxWidth: { xs: 350, sm: 400 },
+    maxehight: { xs: 450, sm: 500 },
     backgroundColor: "primary.dark",
     margin: "1rem",
     // border: "inset 1rem black",

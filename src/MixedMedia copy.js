@@ -5,42 +5,24 @@ import { style } from "./StyleCustom";
 import { Typography } from "@mui/material";
 import Rotate from "./animation/Rotate";
 
-import { ScaleUpCenterAnimation } from "./animation/ScaleUpCenter";
-
 export const localStyle = {
   gridContainer: {
-    pb: { xs: "2rem", sm: "6rem" },
+    pb: { xs: "2rem", md: "5rem" },
+    // backgroundColor: "#ffa000", // amber 700
+    // backgroundColor: "#00bcd4", // amber 700
     backgroundColor: "#00acc1", // amber 700
   },
-  gridContainerInner: {
+  gridContainer02: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: "red",
-  },
-  box: {
-    width: { xs: 350, sm: 500 },
-    height: { xs: 450, sm: 700 },
-    maxWidth: { xs: 350, sm: 500 },
-    maxehight: { xs: 450, sm: 700 },
-    // backgroundColor: "black",
-    // margin: "1rem",
-    // border: 5,
-
-    "&:hover": {
-      cursor: "pointer",
-      // backgroundColor: "primary.main",
-      opacity: [0.1, 0.5, 0.9],
-      // border: 35,
-      // borderColor: "text.primary",
-      // borderRadius: "5%",
-    },
+    pb: { xs: "2rem", md: "5rem" },
   },
   title: {
     display: "flex",
     justifyContent: "center",
-    pt: { xs: "3rem", sm: "15rem" },
-    pb: { xs: "3rem", sm: "15rem" },
+    pt: { xs: 25, sm: 30 },
+    pb: { xs: 25, sm: 30 },
     fontSize: { xs: "h5.fontSize", sm: "24px" },
     fontFamily: "Monospace",
     fontStyle: "italic",
@@ -54,46 +36,40 @@ export const localStyle = {
       // cursor: "pointer",
       // transition: "transform 1s cubic-bezier(.58,.12,.39,1.47)",
       // transform: "translateX(40%)",
-      // transform: "translateX(10%)",
+      transform: "translateX(10%)",
     },
   },
 };
 
 export default function ImageList() {
-  const [action, setAction] = React.useState(false);
-  React.useEffect(() => {
-    setTimeout(() => {
-      // animation
-      setAction(true);
-    }, 0);
-  }, []);
-
   return (
     <Grid container sx={localStyle.gridContainer}>
       <Grid item xs={2} sm={2}></Grid>
       <Grid item xs={4} sm={4}>
         <Rotate />
       </Grid>
-
       <Grid item xs={12} sm={6}>
-        <ScaleUpCenterAnimation action={action}>
-          <Typography sx={localStyle.title}>Mixed Media</Typography>
-        </ScaleUpCenterAnimation>
+        <Typography sx={localStyle.title}>Mixed Media</Typography>
       </Grid>
 
-      <Grid container xs={12} sm={12} sx={localStyle.gridContainerInner}>
+      {/* <Container sx={{ backgroundColor: "red" }}> */}
+      <Grid item xs={12} sm={2}></Grid>
+      <Grid container item xs={12} sm={8} sx={localStyle.gridContainer02}>
         {itemData.map((image) => (
-          <ScaleUpCenterAnimation action={action}>
+          // <Grid item xs={12} sm={3}>
+          <Grid item>
             <Box
               component="img"
-              sx={localStyle.box}
+              sx={style.chalcographyBox}
               src={`${image.img}`}
+
               // alt={`${image.title}`}
             />
-          </ScaleUpCenterAnimation>
+          </Grid>
         ))}
       </Grid>
     </Grid>
+    //  {/* </Container> */}
   );
 }
 

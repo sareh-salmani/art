@@ -2,68 +2,72 @@ import * as React from "react";
 
 import { Box, Grid } from "@mui/material";
 import { style } from "./StyleCustom";
-import Grow from "@mui/material/Grow";
-
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
 
-import { TextAnimation } from "./TextAnimation";
-import Rotate from "./animation/Rotate";
-import { Container } from "@mui/material";
+import { ScaleUpCenterAnimation } from "./animation/ScaleUpCenter";
+
+{
+  /* sx={{ backgroundColor: "black" }} */
+}
 
 export const localStyle = {
   gridContainer: {
     pb: { xs: "2rem", md: "5rem" },
     backgroundColor: "#ffa000", // amber 700
   },
-  gridContainer02: {
-    // width: "90%",
+  gridContainerInner: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    pb: { xs: "2rem", md: "5rem" },
-    // backgroundColor: "#ffa000", // amber 700
     // backgroundColor: "red",
+  },
+  box: {
+    width: 500,
+    height: 550,
+    // backgroundColor: "black",
+    margin: "1rem",
+    // border: 5,
+
+    "&:hover": {
+      cursor: "pointer",
+      // backgroundColor: "primary.main",
+      opacity: [0.1, 0.5, 0.5],
+      // border: 35,
+      // borderColor: "text.primary",
+      // borderRadius: "5%",
+    },
   },
 };
 
 export default function ImageList() {
+  const [action, setAction] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => {
+      // animation
+      setAction(true);
+    }, 0);
+  }, []);
+
   return (
     <Grid container sx={localStyle.gridContainer}>
-      <Grid item xs={2} sm={2}></Grid>
-      <Grid item xs={4} sm={4}>
-        <Rotate />
+      <Grid item xs={12} sm={12}>
+        <Typography sx={style.title}>Chalcography</Typography>
       </Grid>
-      <Grid item xs={12} sm={6}>
-        <Typography sx={style.title}>
-          Chalcography
-          <h6>Coming soon...</h6>
-        </Typography>
-      </Grid>
+      <Grid item xs={2} sm={2} sx={{ backgroundColor: "black" }}></Grid>
 
-      {/*  */}
-      {/* <Container sx={{ backgroundColor: "red" }}> */}
-      <Grid item xs={12} sm={2}>
-        {/* QQQQQQ */}
-      </Grid>
-      <Grid container item xs={12} sm={8} sx={localStyle.gridContainer02}>
+      <Grid container xs={12} sm={12} sx={localStyle.gridContainerInner}>
         {itemData.map((image) => (
-          // <Grid item xs={12} sm={3}>
-          <Grid item>
+          <ScaleUpCenterAnimation action={action}>
             <Box
               component="img"
-              sx={style.chalcographyBox}
+              sx={localStyle.box}
               src={`${image.img}`}
-
               // alt={`${image.title}`}
             />
-          </Grid>
+          </ScaleUpCenterAnimation>
         ))}
       </Grid>
     </Grid>
-    //  {/* </Container> */}
   );
 }
 

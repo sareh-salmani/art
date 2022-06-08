@@ -5,26 +5,39 @@
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+
 import { styled } from "@mui/system";
 import { Typography, keyframes } from "@mui/material";
 
 const keyframe = keyframes`
-    0% {
-      -webkit-transform: rotateX(0);
-              transform: rotateX(0);
-    }
-    100% {
-      -webkit-transform: rotateX(-360deg);
-              transform: rotateX(-360deg);
-    }
+50% {
+  opacity: 0.3;
+}
+100% {
+  opacity: 1;
+}
 `;
 
-export const FlipAnimation = styled(Typography)(({ action }) => ({
+export const ScaleUpCenterAnimation = styled(Typography)(({ action }) => ({
   visibility: !action && "hidden",
   // animation:
   //   action &&
   //   `${trackingInExpand} 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both`,
   "&:hover": {
-    animation: `${keyframe} 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both`,
+    animation: `${keyframe} 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both`,
   },
 }));
+
+// 90% {
+//   -webkit-transform: scale(0.90);
+//           transform: scale(0.90);
+// }
+// 100% {
+//   -webkit-transform: scale(1);
+//           transform: scale(1);
+// }

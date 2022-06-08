@@ -9,6 +9,26 @@ export const localStyle = {
     pb: { xs: "2rem", sm: "5rem" },
     backgroundColor: "#ffca28", // amber 400
   },
+  box: {
+    // width: { xs: 200, sm: 400 },
+    maxWidth: { xs: 350, sm: 400 },
+    maxehight: { xs: 450, sm: 500 },
+
+    // maxHeight: { xs: 450, sm: 500 },
+
+    backgroundColor: "primary.dark",
+    margin: "1rem",
+    border: 5,
+
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "primary.main",
+      opacity: [0.9, 0.8, 0.5],
+      border: 15,
+      borderColor: "text.primary",
+      borderRadius: "10%",
+    },
+  },
 };
 
 export default function ImageList() {
@@ -32,7 +52,7 @@ export default function ImageList() {
         <Grid item xs={12} sm={4} sx={style.gridItem}>
           <Box
             component="img"
-            sx={style.boxDigitalPainting}
+            sx={localStyle.box}
             src={`${image.img}`}
             // alt={`${image.title}`}
           />
@@ -83,10 +103,10 @@ const itemData = [
     img: require("./images/digital_painting/010.jpg").default,
     title: "Tomato basil",
   },
-  {
-    img: require("./images/digital_painting/011.jpg").default,
-    title: "Sea star",
-  },
+  // {
+  //   img: require("./images/digital_painting/011.jpg").default,
+  //   title: "Sea star",
+  // },
   {
     img: require("./images/digital_painting/012.jpg").default,
     title: "Bike",
@@ -95,10 +115,10 @@ const itemData = [
     img: require("./images/digital_painting/013.jpg").default,
     title: "Mushrooms",
   },
-  {
-    img: require("./images/digital_painting/014.jpg").default,
-    title: "Tomato basil",
-  },
+  // {
+  //   img: require("./images/digital_painting/014.jpg").default,
+  //   title: "Tomato basil",
+  // },
   {
     img: require("./images/digital_painting/015.jpg").default,
     title: "Sea star",
@@ -143,10 +163,10 @@ const itemData = [
     img: require("./images/digital_painting/025.jpg").default,
     title: "Bike",
   },
-  {
-    img: require("./images/digital_painting/026.jpg").default,
-    title: "Bike",
-  },
+  // {
+  //   img: require("./images/digital_painting/026.jpg").default,
+  //   title: "Bike",
+  // },
   {
     img: require("./images/digital_painting/027.jpg").default,
     title: "Bike",
@@ -155,10 +175,10 @@ const itemData = [
     img: require("./images/digital_painting/028.jpg").default,
     title: "Bike",
   },
-  {
-    img: require("./images/digital_painting/029.jpg").default,
-    title: "Bike",
-  },
+  // {
+  //   img: require("./images/digital_painting/029.jpg").default,
+  //   title: "Bike",
+  // },
   {
     img: require("./images/digital_painting/030.jpg").default,
     title: "Bike",
