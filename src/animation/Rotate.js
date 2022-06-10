@@ -36,7 +36,7 @@ const RotatedBox2 = styled("div")({
   animation: `${spin} 2s infinite ease`,
 });
 
-export default function BasicUsage(Typography) {
+export default function BasicUsage() {
   return (
     <Box sx={{ mt: "2rem" }}>
       <RotatedBox Typography />

@@ -34,7 +34,7 @@ const style = {
   },
 };
 
-export default function Footer() {
+export default function Drawing() {
   const [action, setAction] = React.useState(false);
   React.useEffect(() => {
     setTimeout(() => {

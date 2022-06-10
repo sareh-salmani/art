@@ -1,10 +1,10 @@
 import * as React from "react";
 
 import { Box, Grid } from "@mui/material";
-import { style } from "./StyleCustom";
+import { style } from "../StyleCustom";
 import { Typography } from "@mui/material";
 
-import { ScaleUpCenterAnimation } from "./animation/ScaleUpCenter";
+import { ScaleUpCenterAnimation } from "../animation/ScaleUpCenter";
 
 {
   /* sx={{ backgroundColor: "black" }} */
@@ -73,67 +73,67 @@ export default function ImageList() {
 
 const itemData = [
   {
-    img: require("./images/digital_painting/001.jpg").default,
+    img: require("../images/digital_painting/001.jpg").default,
     title: "Breakfast",
   },
   {
-    img: require("./images/digital_painting/002.jpg").default,
+    img: require("../images/digital_painting/002.jpg").default,
     title: "Burger",
   },
   {
-    img: require("./images/digital_painting/003.jpg").default,
+    img: require("../images/digital_painting/003.jpg").default,
     title: "Camera",
   },
   {
-    img: require("./images/digital_painting/004.jpg").default,
+    img: require("../images/digital_painting/004.jpg").default,
     title: "Coffee",
   },
   {
-    img: require("./images/digital_painting/005.jpg").default,
+    img: require("../images/digital_painting/005.jpg").default,
     title: "Hats",
   },
   {
-    img: require("./images/digital_painting/006.jpg").default,
+    img: require("../images/digital_painting/006.jpg").default,
     title: "Honey",
   },
   {
-    img: require("./images/digital_painting/007.jpg").default,
+    img: require("../images/digital_painting/007.jpg").default,
     title: "Basketball",
   },
   {
-    img: require("./images/digital_painting/008.jpg").default,
+    img: require("../images/digital_painting/008.jpg").default,
     title: "Fern",
   },
   {
-    img: require("./images/digital_painting/009.jpg").default,
+    img: require("../images/digital_painting/009.jpg").default,
     title: "Mushrooms",
   },
   {
-    img: require("./images/digital_painting/010.jpg").default,
+    img: require("../images/digital_painting/010.jpg").default,
     title: "Tomato basil",
   },
   {
-    img: require("./images/digital_painting/011.jpg").default,
+    img: require("../images/digital_painting/011.jpg").default,
     title: "Sea star",
   },
   {
-    img: require("./images/digital_painting/012.jpg").default,
+    img: require("../images/digital_painting/012.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/digital_painting/013.jpg").default,
+    img: require("../images/digital_painting/013.jpg").default,
     title: "Mushrooms",
   },
   {
-    img: require("./images/digital_painting/014.jpg").default,
+    img: require("../images/digital_painting/014.jpg").default,
     title: "Tomato basil",
   },
   {
-    img: require("./images/digital_painting/015.jpg").default,
+    img: require("../images/digital_painting/015.jpg").default,
     title: "Sea star",
   },
   {
-    img: require("./images/digital_painting/016.jpg").default,
+    img: require("../images/digital_painting/016.jpg").default,
     title: "Bike",
   },
   // {

@@ -2,21 +2,21 @@ import "./App.css";
 
 import { SRLWrapper } from "simple-react-lightbox";
 
-import ImagesList2 from "./ImagesList2";
-import Nav from "./components/Nav";
+import ImagesList2 from "./categories/ImagesList2";
+import Nav from "./categories/Nav";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import { theme } from "./Style";
-import Footer from "./Footer";
-import Drawing from "./Drawing";
-import PoemOne from "./PoemOne";
-import PoemNull from "./PoemNull";
-import Poem02 from "./Poem02";
-import DigitalPainting from "./DigitalPainting";
-import Chalcography from "./Chalcography";
+import Footer from "./categories/Footer";
+import Drawing from "./categories/Drawing";
+import Poem01 from "./poems/Poem01";
+import Poem00 from "./poems/Poem00";
+import Poem02 from "./poems/Poem02";
+import DigitalPainting from "./categories/DigitalPainting";
+import Chalcography from "./categories/Chalcography";
 import SimpleGrow from "./SimpleGrow";
-import MixedMedia from "./MixedMedia";
+import MixedMedia from "./categories/MixedMedia";
 
 const style = {
   buttons: {
@@ -39,9 +39,9 @@ function App() {
           <ImagesList2 />
           {/* </Container> */}
 
-          <PoemNull />
+          <Poem00 />
           <Drawing />
-          <PoemOne />
+          <Poem01 />
           <DigitalPainting />
           <Poem02 />
           <MixedMedia />

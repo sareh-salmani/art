@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import { Box, Grid } from "@mui/material";
-import { style } from "./StyleCustom";
+import { style } from "../StyleCustom";
 import { Typography } from "@mui/material";
-import Rotate from "./animation/Rotate";
+import Rotate from "../animation/Rotate";
 
-import { ScaleUpCenterAnimation } from "./animation/ScaleUpCenter";
+import { ScaleUpCenterAnimation } from "../animation/ScaleUpCenter";
 
 export const localStyle = {
   gridContainer: {
@@ -24,13 +24,12 @@ export const localStyle = {
     maxWidth: { xs: 350, sm: 500 },
     maxehight: { xs: 450, sm: 700 },
     // backgroundColor: "black",
-    // margin: "1rem",
-    // border: 5,
+    margin: ".5rem",
 
     "&:hover": {
       cursor: "pointer",
       // backgroundColor: "primary.main",
-      opacity: [0.1, 0.5, 0.9],
+      // opacity: [0.1, 0.5, 0.9],
       // border: 35,
       // borderColor: "text.primary",
       // borderRadius: "5%",
@@ -99,15 +98,15 @@ export default function ImageList() {
 
 const itemData = [
   {
-    img: require("./images/mixed_media/001.jpg").default,
+    img: require("../images/mixed_media/001.jpg").default,
     title: "Breakfast",
   },
   {
-    img: require("./images/mixed_media/002.jpg").default,
+    img: require("../images/mixed_media/002.jpg").default,
     title: "Burger",
   },
   {
-    img: require("./images/mixed_media/003.jpg").default,
+    img: require("../images/mixed_media/003.jpg").default,
     title: "Camera",
   },
   // {

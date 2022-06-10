@@ -21,7 +21,7 @@ export const style = {
     fontStyle: "italic",
     fontWeight: "light",
     letterSpacing: { xs: 0, sm: 12 },
-    transition: "all 1.5s linear",
+    // transition: "all 1.5s linear",
 
     // backgroundColor: "#2196f3",
 
@@ -29,7 +29,7 @@ export const style = {
       // cursor: "pointer",
       // transition: "transform 1s cubic-bezier(.58,.12,.39,1.47)",
       // transform: "translateX(40%)",
-      transform: "translateX(10%)",
+      // transform: "translateX(10%)",
     },
   },
   buttons: {

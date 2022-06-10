@@ -6,9 +6,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-import { FlipAnimation } from "./animation/FlipAnimation";
+import { FlipAnimation } from "../animation/FlipAnimation";
+import { TransformRightAndBack } from "../animation/TransformRightAndBack";
+import Rotate02 from "../animation/Rotate02";
 
-import avatar from "./images/intro/0002.jpg";
+import avatar from "../images/intro/0002.jpg";
 
 const style = {
   gridContainer: {
@@ -85,7 +87,7 @@ export default function StandardImageList() {
     <Grid container sx={style.gridContainer}>
       <Container>
         {/* Avatar */}
-        <FlipAnimation action={action}>
+        <TransformRightAndBack action={action}>
           <Grid container spacing={1} sx={style.gridContainerAvatar}>
             <Grid item xs={12} sm={4}>
               <Avatar
@@ -112,7 +114,7 @@ export default function StandardImageList() {
               </Typography>
             </Grid>
           </Grid>
-        </FlipAnimation>
+        </TransformRightAndBack>
 
         {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
         {/* <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
@@ -158,99 +160,99 @@ const icons = (
 
 const itemData = [
   {
-    img: require("./images/painting_on_paper/0001.jpg").default,
+    img: require("../images/painting_on_paper/0001.jpg").default,
     title: "Breakfast",
   },
   {
-    img: require("./images/painting_on_paper/0002.jpg").default,
+    img: require("../images/painting_on_paper/0002.jpg").default,
     title: "Burger",
   },
   {
-    img: require("./images/painting_on_paper/0003.jpg").default,
+    img: require("../images/painting_on_paper/0003.jpg").default,
     title: "Camera",
   },
   {
-    img: require("./images/painting_on_paper/0004.jpg").default,
+    img: require("../images/painting_on_paper/0004.jpg").default,
     title: "Coffee",
   },
   {
-    img: require("./images/painting_on_paper/0005.jpg").default,
+    img: require("../images/painting_on_paper/0005.jpg").default,
     title: "Hats",
   },
   {
-    img: require("./images/painting_on_paper/0006.jpg").default,
+    img: require("../images/painting_on_paper/0006.jpg").default,
     title: "Honey",
   },
   {
-    img: require("./images/painting_on_paper/0007.jpg").default,
+    img: require("../images/painting_on_paper/0007.jpg").default,
     title: "Basketball",
   },
   {
-    img: require("./images/painting_on_paper/0008.jpg").default,
+    img: require("../images/painting_on_paper/0008.jpg").default,
     title: "Fern",
   },
   {
-    img: require("./images/painting_on_paper/0009.jpg").default,
+    img: require("../images/painting_on_paper/0009.jpg").default,
     title: "Mushrooms",
   },
   {
-    img: require("./images/painting_on_paper/0010.jpg").default,
+    img: require("../images/painting_on_paper/0010.jpg").default,
     title: "Tomato basil",
   },
   {
-    img: require("./images/painting_on_paper/0011.jpg").default,
+    img: require("../images/painting_on_paper/0011.jpg").default,
     title: "Sea star",
   },
   {
-    img: require("./images/painting_on_paper/0012.jpg").default,
+    img: require("../images/painting_on_paper/0012.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0013.jpg").default,
+    img: require("../images/painting_on_paper/0013.jpg").default,
     title: "Mushrooms",
   },
   {
-    img: require("./images/painting_on_paper/0014.jpg").default,
+    img: require("../images/painting_on_paper/0014.jpg").default,
     title: "Tomato basil",
   },
   {
-    img: require("./images/painting_on_paper/0015.jpg").default,
+    img: require("../images/painting_on_paper/0015.jpg").default,
     title: "Sea star",
   },
   {
-    img: require("./images/painting_on_paper/0016.jpg").default,
+    img: require("../images/painting_on_paper/0016.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0017.jpg").default,
+    img: require("../images/painting_on_paper/0017.jpg").default,
     title: "Mushrooms",
   },
   {
-    img: require("./images/painting_on_paper/0018.jpg").default,
+    img: require("../images/painting_on_paper/0018.jpg").default,
     title: "Tomato basil",
   },
   {
-    img: require("./images/painting_on_paper/0019.jpg").default,
+    img: require("../images/painting_on_paper/0019.jpg").default,
     title: "Sea star",
   },
   {
-    img: require("./images/painting_on_paper/0020.jpg").default,
+    img: require("../images/painting_on_paper/0020.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0021.jpg").default,
+    img: require("../images/painting_on_paper/0021.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0022.jpg").default,
+    img: require("../images/painting_on_paper/0022.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0023.jpg").default,
+    img: require("../images/painting_on_paper/0023.jpg").default,
     title: "Bike",
   },
   {
-    img: require("./images/painting_on_paper/0024.jpg").default,
+    img: require("../images/painting_on_paper/0024.jpg").default,
     title: "Bike",
   },
 ];
